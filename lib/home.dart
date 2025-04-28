@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
 
       final response = await http.get(
         Uri.parse(
-          'http://192.168.35.44:8000/complaint/get-user-journey/?train_number=$train_number',
+          'https://rail-madad-otq2.onrender.com/complaint/get-user-journey/?train_number=$train_number',
         ),
       );
 
@@ -324,7 +324,7 @@ class ComplaintCard extends StatelessWidget {
       };
 
       final response = await http.post(
-        Uri.parse('http://192.168.35.44:8000/manager/set_status/'),
+        Uri.parse('https://rail-madad-otq2.onrender.com/manager/set_status/'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(requestData),
       );
